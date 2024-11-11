@@ -1,0 +1,434 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:linear-gradient(to bottom, rgb(49, 49, 49), rgb(179, 90, 90), black);
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* nav bar styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  margin-bottom:40px;
+}
+
+.logo {
+  height: 110px;
+  width: 180px;
+  display:flex;
+  position:sticky;
+  position:fixed;
+  top:2px;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  position:sticky;
+  position:fixed;
+  top:10px;
+  left:1090px;
+  gap: 15px; 
+}
+
+.language-selector {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.language-selector select {
+  padding-left: 40px; 
+  background-color: black;
+  color: white;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  height: 40px;
+  font-size: 1.2rem;
+}
+
+.language-selector select option {
+  background-color: white;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.language-selector .translate-icon {
+  position: absolute;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+button {
+  background-color: #f1efef;
+  color: #0f0f0f;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #9c9a9a;
+}
+
+/* Hero Section */
+.hero {
+  background: 
+      linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+      ), 
+      url('https://assets.nflxext.com/ffe/siteui/vlv3/61b94313-a53b-4a73-b973-7632aafc9d8f/web_tall_panel/IN-en-20241104-TRIFECTA-perspective_5e478a9d-0baf-4a93-8987-7a8ebf6f7fe8_medium.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  border-radius: 50px;
+  border: 2px solid white;
+  margin:40px;
+  margin-top:100px;
+  
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom:15px;
+}
+
+.hero-content h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color:rgb(190, 181, 181);
+}
+/* below hero styling */
+.email-signup {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.email-input {
+  padding: 10px;
+  font-size: 1.2rem;
+  width: 40%;
+  max-width: 300px;
+  height:30px;
+  border-radius: 20px;
+  background-color:black;
+  border:2px solid white;
+}
+
+.get-started-button {
+  padding: 15px 25px;
+  font-size: 2rem;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.get-started-button:hover{
+  background-color: #a70f16;
+}
+.get-started-button1 {
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-left:600px;
+  margin-top:20px;
+}
+.get-started-button1:hover{
+  background-color: #a70f16;
+}
+/* heading styling */
+.heading {
+  display: flex;
+  position: sticky;
+  position:fixed;
+  justify-content: center;
+  align-items: center;
+  top: 60px;
+  left:330px;
+  background-color: black; 
+  padding: 2px 5px; 
+  border-radius: 30px;
+  width: 45%; 
+  margin: 0 auto;
+  margin-bottom: 10px;
+  height: 35px;
+}
+
+.heading a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: rgb(170, 169, 169);
+  font-size: 1rem;
+  
+}
+.heading a:hover {
+  color: white; 
+}
+/* Section Wise Styling - trending and only */
+.secHead{
+  font-family:inherit;
+  font-size:2rem;
+  color:white;
+  margin-left: 50px; 
+  font-weight:700;
+}
+.trending,.only {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-left: 50px; 
+}
+
+
+.card {
+  width: 220px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card:hover {
+  transform: scale(1.05); 
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+}
+/*  Plan Card styling */
+.PlanCards{
+  display: inline-flex;
+  flex-direction: row;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: left;
+  gap:20px;
+  overflow-y:hidden;
+  
+}
+.card1 {
+  background:linear-gradient(to bottom right, rgb(44, 40, 102), rgb(31, 5, 124), rgb(11, 1, 56));
+  color: white;
+  border-radius: 15px;
+  border:2px solid rgb(46, 39, 143);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 250px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card2 {
+  background:linear-gradient(to bottom right, rgb(44, 40, 102), rgb(23, 4, 93), rgb(9, 1, 46));
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border:2px solid rgb(46, 39, 143);
+  width: 250px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card3 {
+  background:linear-gradient(to bottom right, rgb(44, 40, 102), rgb(87, 12, 158), rgb(82, 2, 107));
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border:2px solid rgb(88, 39, 143);
+  width: 250px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card4 {
+  background:linear-gradient(to bottom right, rgb(44,40, 102), rgb(80, 5, 124), rgb(11, 1, 56));
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border:2px solid rgb(126, 39, 143);
+  width: 250px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.PlanCards h2, h3, p {
+  margin: auto;
+}
+
+.PlanCards .checkicon {
+  margin-right: 8px;
+  height:20px;
+  width:20px;
+}
+
+.card1:hover {
+  background:linear-gradient(to bottom right, rgb(66, 56, 197), rgb(44, 8, 172), rgb(11, 1, 56));
+  transform: scale(1.0);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card2:hover {
+  background:linear-gradient(to bottom right, rgb(47, 40, 143), rgb(44, 8, 172), rgb(11, 1, 56));
+  transform: scale(1.0);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.card3:hover {
+  background:linear-gradient(to bottom right, rgb(132, 41, 155), rgb(108, 15, 196), rgb(133, 4, 172));
+  transform: scale(1.0);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.card4:hover {
+  background:linear-gradient(to bottom right, rgb(189, 60, 221), rgb(130, 20, 233), rgb(151, 4, 196));
+  transform: scale(1.0);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.PlanCards p:last-child {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #90908b; 
+}
+/* Reason Cards Styling */
+.Reasons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom:20px;
+  padding:20px;
+}
+
+/* Card Styling */
+.cardss {
+  background: #222222;
+  border-radius: 15px;
+  border:2px solid rgb(43, 42, 42);
+  padding: 20px;
+  width: 250px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Content Styling */
+.cardss p {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 600;
+  margin-top: 20px;
+  text-align: left;
+  margin-left:5px;
+}
+
+.cardss img {
+  width: 50px;
+  height: 50px;
+  margin-top:50px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  margin-left:230px;
+}
+/* Faq Section Styling */
+.faq {
+  margin-top: 20px;
+  width:95%;
+  align-items:center;
+  font-family: inherit;
+  margin-left: auto;
+  margin-right: auto;
+  color:white;
+  scroll-behavior: smooth;
+}
+
+.faq .question {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 30px;
+  margin-bottom: 5px;
+  background-color: #302f2f;
+  border: 1px solid #464545;
+  border-radius: 20px;
+}
+
+.faq .answer {
+  display: none;
+  padding: 10px;
+  background-color: #302f2f;
+  border: 1px solid #464545;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.faq input[type="checkbox"]:checked + .answer {
+  display: block;
+}
+
+.faq .faq-toggle {
+  display: none;
+}
+/* Footer Styling */
+.footer {
+  background-color:black;
+  color: #999;
+  padding: 20px;
+  font-family: inherit;
+  text-align: center;
+  margin:20px 0;
+}
+
+.footer .footer-top {
+  font-size: 1em;
+  margin-bottom: 20px;
+  margin-left:260px;
+  text-align:left
+}
+
+.footer table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  color: #999;
+}
+
+.footer td {
+  padding: 10px;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.footer a {
+  color: #999;
+}
